@@ -28,20 +28,34 @@
     "name": "Mundo Motos S.A.",
     "description": "Venta de repuestos para moto, accesorios y taller de servicio técnico en Asunción, Paraguay. Trabajamos con todas las marcas y modelos.",
     "url": "https://builttoclick.github.io/mundo-motos/",
-    "telephone": "+595-985-156725",
+    "telephone": "+595-991-331440",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. Eusebio Ayala 4326 c/ La Victoria",
       "addressLocality": "Asunción",
       "addressRegion": "Asunción",
+      "postalCode": "001426",
       "addressCountry": "PY"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": -25.3005,
-      "longitude": -57.6362
+      "latitude": -25.3162522,
+      "longitude": -57.5752079
     },
-    "openingHoursSpecification": [],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    ],
     "priceRange": "$$",
     "hasMap": "https://maps.google.com/?q=Mundo+Motos+SA+Av+Eusebio+Ayala+4326+Asuncion+Paraguay",
     "areaServed": {
@@ -219,6 +233,21 @@
     .callout p { color: #ccc; margin-bottom: 0; font-size: 0.97rem; }
     .callout strong { color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; letter-spacing: 0.04em; display: block; margin-bottom: 8px; }
 
+    /* ── AREAS GRID ── */
+    .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 14px; margin: 18px 0 8px; }
+    .areas-grid a { display: block; background: #ede8df; border: 1px solid var(--accent); border-left: 4px solid var(--red); padding: 14px 16px; text-decoration: none; color: var(--dark); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.03em; font-size: 1.05rem; }
+    .areas-grid a:hover { background: #e4ddcf; }
+    .areas-grid a span { display: block; color: var(--muted); font-family: 'Lora', serif; font-size: 0.84rem; letter-spacing: 0; margin-top: 3px; }
+
+    /* ── MAP ── */
+    .map-wrap {
+      margin: 16px 0 8px;
+      border: 2px solid var(--accent);
+      border-radius: 2px;
+      overflow: hidden;
+      line-height: 0;
+    }
+
     /* ── TABLE ── */
     .table-wrap { overflow-x: auto; margin: 32px 0; }
     table {
@@ -303,13 +332,15 @@
     /* ── FOOTER ── */
     footer {
       background: var(--dark);
-      color: #555;
+      color: #888;
       text-align: center;
       padding: 24px;
       font-size: 0.8rem;
+      line-height: 1.8;
       font-family: 'Barlow Condensed', sans-serif;
       letter-spacing: 0.06em;
     }
+    footer strong { color: #fff; }
 
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
@@ -325,7 +356,7 @@
     <div class="header-inner">
       <p class="eyebrow">Asunción, Paraguay · Repuestos &amp; Taller</p>
       <h1>Repuestos para Moto<br>en <em>Asunción</em>:<br>Todo lo que Necesitás</h1>
-      <p class="header-meta">Mundo Motos S.A. · Av. Eusebio Ayala 4326 c/ La Victoria</p>
+      <p class="header-meta">Mundo Motos S.A. · Av. Eusebio Ayala 4326 c/ La Victoria · Tel: 0991 331440 · WhatsApp: 0985 156 725</p>
     </div>
   </header>
 
@@ -498,17 +529,42 @@
       <p>Av. Eusebio Ayala 4326 c/ La Victoria, Barrio Hipódromo, Asunción. Sobre Eusebio Ayala, una de las avenidas principales del área.</p>
     </div>
 
+    <!-- ── ZONAS ── -->
+    <h2>Zonas que cubrimos en Asunción</h2>
+    <p>
+      Atendemos a motociclistas de toda la ciudad desde nuestro local sobre Av. Eusebio Ayala. Si sos del oeste o el noroeste de Asunción, armamos páginas con la información puntual de tu zona — qué repuestos salen más, qué resolvemos y cómo llegar:
+    </p>
+    <div class="areas-grid">
+      <a href="zonas/tembetary.html">Tembetary <span>Transmisión, cubiertas y servicio rápido en el noroeste</span></a>
+      <a href="zonas/nazareth.html">Nazareth <span>Repuestos, iluminación y accesorios de seguridad en el oeste</span></a>
+      <a href="zonas/medicos-del-chaco.html">Médicos del Chaco <span>Cambio de aceite y mantenimiento para el corredor noroeste</span></a>
+      <a href="zonas/concepcion-rca-argentina.html">Concepción / Rca. Argentina <span>Accesorios, frenos y taller sobre el corredor oeste</span></a>
+    </div>
+
+    <!-- ── MAPA ── -->
+    <h2>Cómo llegar</h2>
+    <div class="map-wrap">
+      <iframe
+        title="Ubicación de Mundo Motos S.A. en Av. Eusebio Ayala 4326, Asunción"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.6413211197532!2d-57.57520789999999!3d-25.3162522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da99d2b9b6963%3A0x365bcf6497969b39!2sMundo%20Motos%20S.A!5e0!3m2!1ses-419!2spy!4v1779727317837!5m2!1ses-419!2spy"
+        width="100%" height="340" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
     <!-- ── CTA ── -->
     <div class="cta-block">
       <h2>Mundo Motos S.A.</h2>
       <p>Repuestos para moto, accesorios y taller técnico en Asunción. Más de 10 años atendiendo a motociclistas de toda la ciudad.</p>
       <p class="address">Av. Eusebio Ayala 4326 c/ La Victoria · Barrio Hipódromo · Asunción</p>
+      <p style="margin-top:10px;"><a href="tel:+595991331440" style="color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:1.15rem; letter-spacing:0.06em; text-decoration:none;">Tel: 0991 331440</a> &nbsp;·&nbsp; <a href="https://wa.me/595985156725" style="color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:1.15rem; letter-spacing:0.06em; text-decoration:none;">WhatsApp: 0985 156 725</a></p>
+      <p style="margin-top:6px; color:rgba(255,255,255,0.85); font-size:0.9rem;">Lun a Vie 08:00–18:30 · Sáb 08:00–17:00 · Dom cerrado</p>
       <p style="margin-top:14px; color:rgba(255,255,255,0.7); font-size:0.9rem;">Consultá disponibilidad en el local o pasá directamente por Eusebio Ayala.</p>
     </div>
 
   </main>
 
   <footer>
+    <strong>Mundo Motos S.A.</strong> · Av. Eusebio Ayala 4326 c/ La Victoria, Barrio Hipódromo, Asunción 001426, Paraguay · Tel: 0991 331440 · WhatsApp: 0985 156 725<br>
     © Mundo Motos S.A. · Asunción, Paraguay
   </footer>
 

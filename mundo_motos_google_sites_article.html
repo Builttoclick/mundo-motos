@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repuestos para Moto en Asunción | Mundo Motos S.A.</title>
+  <meta name="description" content="Mundo Motos S.A. ofrece repuestos para moto, accesorios y taller técnico en Asunción. Atención rápida, precios accesibles y stock permanente para todas las marcas." />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:     #C8102E;
+      --dark:    #111111;
+      --mid:     #2A2A2A;
+      --warm:    #F5F0E8;
+      --accent:  #E8D5B0;
+      --text:    #1A1A1A;
+      --muted:   #555555;
+    }
+
+    body {
+      background: var(--warm);
+      color: var(--text);
+      font-family: 'Lora', Georgia, serif;
+      line-height: 1.75;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--dark);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .header-stripe {
+      height: 6px;
+      background: var(--red);
+    }
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 52px 24px 44px;
+    }
+    .eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      line-height: 1.05;
+      color: #fff;
+      max-width: 720px;
+    }
+    h1 em {
+      color: var(--red);
+      font-style: normal;
+    }
+    .header-meta {
+      margin-top: 22px;
+      font-size: 0.85rem;
+      color: #888;
+      font-family: 'Barlow Condensed', sans-serif;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── LAYOUT ── */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* ── LEAD ── */
+    .lead {
+      font-size: 1.18rem;
+      color: var(--mid);
+      border-left: 4px solid var(--red);
+      padding-left: 20px;
+      margin-bottom: 48px;
+      font-style: italic;
+    }
+
+    /* ── HEADINGS ── */
+    h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      letter-spacing: 0.02em;
+      color: var(--dark);
+      margin: 52px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+    }
+    h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: 0.04em;
+      color: var(--red);
+      margin: 28px 0 8px;
+      text-transform: uppercase;
+    }
+
+    p { margin-bottom: 1.1rem; }
+
+    /* ── CALLOUT BOX ── */
+    .callout {
+      background: var(--dark);
+      color: #fff;
+      border-left: 6px solid var(--red);
+      padding: 28px 28px 24px;
+      margin: 40px 0;
+      border-radius: 2px;
+    }
+    .callout p { color: #ccc; margin-bottom: 0; font-size: 0.97rem; }
+    .callout strong { color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; letter-spacing: 0.04em; display: block; margin-bottom: 8px; }
+
+    /* ── TABLE ── */
+    .table-wrap { overflow-x: auto; margin: 32px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.93rem;
+    }
+    thead { background: var(--dark); color: #fff; }
+    thead th {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 12px 16px;
+      text-align: left;
+    }
+    tbody tr:nth-child(odd)  { background: #ede8df; }
+    tbody tr:nth-child(even) { background: var(--warm); }
+    tbody td { padding: 11px 16px; vertical-align: top; }
+    tbody td:first-child { font-weight: 600; color: var(--dark); }
+
+    /* ── LIST ── */
+    ul.feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 24px;
+    }
+    ul.feature-list li {
+      padding: 8px 0 8px 28px;
+      position: relative;
+      border-bottom: 1px solid var(--accent);
+      font-size: 0.97rem;
+    }
+    ul.feature-list li::before {
+      content: '▸';
+      color: var(--red);
+      position: absolute;
+      left: 6px;
+      top: 9px;
+      font-size: 0.8rem;
+    }
+
+    /* ── FAQ ── */
+    .faq-item {
+      margin: 20px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--accent);
+    }
+    .faq-q {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    /* ── CTA FOOTER ── */
+    .cta-block {
+      background: var(--red);
+      color: #fff;
+      padding: 40px 32px;
+      margin: 56px 0 0;
+      border-radius: 2px;
+      text-align: center;
+    }
+    .cta-block h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2rem;
+      border: none;
+      margin: 0 0 12px;
+      color: #fff;
+    }
+    .cta-block p { color: rgba(255,255,255,0.88); margin-bottom: 0; }
+    .cta-block .address {
+      margin-top: 18px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.7);
+      text-transform: uppercase;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      color: #555;
+      text-align: center;
+      padding: 24px;
+      font-size: 0.8rem;
+      font-family: 'Barlow Condensed', sans-serif;
+      letter-spacing: 0.06em;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.4rem; }
+      main { padding: 40px 18px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-stripe"></div>
+  <header>
+    <div class="header-inner">
+      <p class="eyebrow">Asunción, Paraguay · Repuestos &amp; Taller</p>
+      <h1>Repuestos para Moto<br>en <em>Asunción</em>:<br>Todo lo que Necesitás</h1>
+      <p class="header-meta">Mundo Motos S.A. · Av. Eusebio Ayala 4326 c/ La Victoria</p>
+    </div>
+  </header>
+
+  <main>
+
+    <p class="lead">
+      Encontrar repuestos para moto de buena calidad, al precio justo y sin tener que recorrer media ciudad es más difícil de lo que parece. Esta guía te explica qué necesitás saber antes de comprar, qué productos son clave para el mantenimiento de tu moto, y dónde conseguirlos en Asunción.
+    </p>
+
+    <!-- ── 1 ── -->
+    <h2>Por qué los repuestos importan más de lo que pensás</h2>
+    <p>
+      En Paraguay, la moto no es un lujo: es transporte diario, herramienta de trabajo, y en muchos casos la única opción para moverse rápido en el tráfico de Asunción. Para deliveries, trabajadores independientes y familias que dependen de su moto, una pieza en mal estado no es solo un inconveniente: es una pérdida de plata y de tiempo.
+    </p>
+    <p>
+      El problema es que muchos repuestos baratos que circulan en el mercado duran poco, afectan el rendimiento del motor y en algunos casos generan riesgos de seguridad. Conocer qué comprar, de dónde y con qué criterio hace una diferencia real.
+    </p>
+
+    <!-- ── 2 ── -->
+    <h2>Las partes más importantes que debés revisar regularmente</h2>
+
+    <h3>Iluminación</h3>
+    <p>
+      Los faros delanteros y señaleros son los primeros en sufrir en el tráfico urbano. Circular con iluminación deficiente no solo es peligroso: en muchos controles policiales de Asunción es motivo de multa inmediata. Las opciones LED y bixenón tienen mayor durabilidad y visibilidad que las luces convencionales.
+    </p>
+
+    <h3>Sistema de transmisión (cadena y kit de arrastre)</h3>
+    <p>
+      La cadena es una de las piezas con mayor desgaste en motos de uso intensivo. Un kit de arrastre completo — que incluye cadena, piñón y corona — debería revisarse cada 10.000 km aproximadamente. Los kits con cadena O'Ring como los de la línea NPC ofrecen mayor vida útil y mejor sellado frente al polvo y la lluvia.
+    </p>
+
+    <h3>Neumáticos y cámaras</h3>
+    <p>
+      Las calles de Asunción no son precisamente las más amigables con los neumáticos. Pozos, pavimento irregular y baches son el día a día. Revisar la presión con frecuencia y cambiar el neumático cuando el dibujo llega al límite de desgaste es básico para la seguridad y el consumo de combustible.
+    </p>
+
+    <h3>Aceite y lubricantes</h3>
+    <p>
+      El cambio de aceite es el mantenimiento más simple y el más ignorado. En motos de uso urbano intensivo, se recomienda cada 3.000 a 5.000 km según el tipo de aceite. Usar el grado de viscosidad equivocado puede acortar significativamente la vida del motor.
+    </p>
+
+    <h3>Sistema eléctrico y batería</h3>
+    <p>
+      Batería baja, falla de arranque, luces intermitentes — son síntomas frecuentes en motos con más de dos años de uso. El sistema eléctrico de las motos económicas y chinas que circulan en Paraguay es sencillo, pero sensible a humedad y conexiones flojas.
+    </p>
+
+    <!-- table -->
+    <h2>Guía rápida: ¿Cada cuánto cambiar estas piezas?</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Pieza</th>
+            <th>Frecuencia recomendada</th>
+            <th>Señal de alerta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Aceite de motor</td>
+            <td>Cada 3.000–5.000 km</td>
+            <td>Color negro oscuro, ruido en el motor</td>
+          </tr>
+          <tr>
+            <td>Cadena y kit de arrastre</td>
+            <td>Cada 10.000–15.000 km</td>
+            <td>Cadena suelta, ruido al acelerar</td>
+          </tr>
+          <tr>
+            <td>Neumáticos</td>
+            <td>Según desgaste visible</td>
+            <td>Dibujo a menos de 1,6 mm de profundidad</td>
+          </tr>
+          <tr>
+            <td>Pastillas de freno</td>
+            <td>Cada 15.000–20.000 km</td>
+            <td>Ruido al frenar, frenada blanda</td>
+          </tr>
+          <tr>
+            <td>Batería</td>
+            <td>Cada 2–3 años</td>
+            <td>Dificultad de arranque, luces débiles</td>
+          </tr>
+          <tr>
+            <td>Filtro de aire</td>
+            <td>Cada 10.000 km</td>
+            <td>Consumo elevado, pérdida de potencia</td>
+          </tr>
+          <tr>
+            <td>Bujía</td>
+            <td>Cada 8.000–12.000 km</td>
+            <td>Arranque difícil, marcha irregular</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ── 3 ── -->
+    <h2>Accesorios de seguridad: lo que no puede faltar</h2>
+    <p>
+      Paraguay tiene una de las tasas más altas de accidentes de tránsito de la región, y las motos son el vehículo más involucrado. El casco es obligatorio por ley, pero el nivel de protección varía enormemente según la marca y el modelo.
+    </p>
+    <ul class="feature-list">
+      <li><strong>Cascos homologados</strong> — marcas como San Marino, LS2 y ProTork ofrecen distintos niveles de protección y precio. El LS2 tiene certificación internacional; el San Marino es el más usado a nivel local.</li>
+      <li><strong>Guantes de moto</strong> — protegen las manos en caso de caída. Los guantes reforzados en nudillos reducen lesiones en los accidentes más comunes.</li>
+      <li><strong>Chalecos reflectivos</strong> — esenciales para deliveries y para circular de noche en zonas con poca iluminación.</li>
+      <li><strong>Espejos</strong> — muchas motos circulan sin uno de los espejos. Es un riesgo constante y un problema legal frecuente en controles.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Tip de seguridad vial</strong>
+      <p>Un casco en mal estado — con el interior aplastado, golpes previos o más de 5 años de uso — ya no protege igual aunque se vea bien por fuera. Si tu casco sufrió un impacto fuerte, lo correcto es reemplazarlo aunque no muestre daño visible.</p>
+    </div>
+
+    <!-- ── 4 ── -->
+    <h2>El taller: tan importante como los repuestos</h2>
+    <p>
+      Comprar la pieza correcta es solo la mitad del trabajo. La otra mitad es tener a alguien que la instale bien. Un mal trabajo de taller puede arruinar una pieza nueva en horas.
+    </p>
+    <p>
+      Un buen taller técnico para motos debería ofrecerte presupuesto antes de empezar, explicarte qué se encontró durante la revisión, y garantizar el trabajo realizado. El registro del proceso — qué se cambió, qué se revisó — es una señal de seriedad y te protege si algo falla después.
+    </p>
+    <p>
+      Para motos de uso diario o trabajo (deliveries, transporte), tener un taller de confianza en Asunción donde sepan tu historial de mantenimiento vale más que buscar el precio más bajo cada vez.
+    </p>
+
+    <!-- ── 5 ── -->
+    <h2>Cómo elegir dónde comprar repuestos de moto en Asunción</h2>
+    <p>
+      El mercado de repuestos para moto en Asunción es amplio pero desparejo. Hay locales con stock serio y personal que sabe, y hay puestos donde venden de todo sin garantía ni asesoramiento. Algunos criterios para elegir bien:
+    </p>
+    <ul class="feature-list">
+      <li><strong>Variedad de marcas</strong> — un buen proveedor trabaja con todas las marcas que circulan en Paraguay, no solo con las más comunes.</li>
+      <li><strong>Taller en el mismo local</strong> — evitás el riesgo de que el mecánico no conozca los repuestos que instaló.</li>
+      <li><strong>Atención personalizada</strong> — alguien que te escuche describir el problema y te recomiende la pieza correcta, no que simplemente te despache.</li>
+      <li><strong>Precios claros</strong> — presupuesto en el acto, sin sorpresas.</li>
+      <li><strong>Años de trayectoria</strong> — la experiencia en el rubro es difícil de reemplazar cuando se trata de motos multi-marca y chinas con particularidades propias.</li>
+    </ul>
+
+    <!-- ── FAQ ── -->
+    <h2>Preguntas frecuentes sobre repuestos de moto</h2>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Tienen repuestos para motos chinas y de marcas poco conocidas?</p>
+      <p>Sí. En Mundo Motos S.A. trabajamos con todas las marcas y modelos que circulan en Paraguay, incluyendo motos económicas, chinas y multi-marca. Es justamente donde muchos concesionarios oficiales quedan cortos.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Puedo traer mi moto al taller sin comprar repuestos en el local?</p>
+      <p>Sí, el taller técnico es un servicio independiente. Hacemos diagnóstico, mantenimiento y reparaciones. Si el repuesto está disponible en el local, te lo ofrecemos; si no, podés conseguirlo por tu cuenta.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Cuánto tarda el servicio técnico?</p>
+      <p>Para trabajos de mantenimiento rutinario (cambio de aceite, ajuste de cadena, revisión eléctrica básica) generalmente se resuelve el mismo día. Para reparaciones mayores te damos un presupuesto con tiempo estimado antes de arrancar.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Qué marcas de cascos tienen disponibles?</p>
+      <p>Manejamos stock de San Marino, LS2 y ProTork, que son las marcas de mayor demanda en Asunción. El stock varía según modelo y talla; lo mejor es consultar disponibilidad directamente en el local.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Tienen repuestos eléctricos para motos?</p>
+      <p>Sí. Baterías, cableado, luces (incluyendo LED, xenón y bixenón), señaleros y partes eléctricas diversas forman parte del stock permanente.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Dónde están ubicados?</p>
+      <p>Av. Eusebio Ayala 4326 c/ La Victoria, Barrio Hipódromo, Asunción. Sobre Eusebio Ayala, una de las avenidas principales del área.</p>
+    </div>
+
+    <!-- ── CTA ── -->
+    <div class="cta-block">
+      <h2>Mundo Motos S.A.</h2>
+      <p>Repuestos para moto, accesorios y taller técnico en Asunción. Más de 10 años atendiendo a motociclistas de toda la ciudad.</p>
+      <p class="address">Av. Eusebio Ayala 4326 c/ La Victoria · Barrio Hipódromo · Asunción</p>
+      <p style="margin-top:14px; color:rgba(255,255,255,0.7); font-size:0.9rem;">Consultá disponibilidad en el local o pasá directamente por Eusebio Ayala.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    © Mundo Motos S.A. · Asunción, Paraguay
+  </footer>
+
+</body>
+</html>
